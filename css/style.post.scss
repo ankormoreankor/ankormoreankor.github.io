@@ -16,20 +16,18 @@
 .Menu-Opener {
     position: relative;
     padding-right: 15px;
-}
-
-.Menu-Opener::after {
+    &::after {
         content: "";
         position: absolute;
         display: block;
         width: 7px;
         height: 7px;
         background-image: linear-gradient(45deg, #0d3351 50%, transparent 50%);
-        -webkit-transform: rotate(-45deg);
-                transform: rotate(-45deg);
+        transform: rotate(-45deg);
         right: 0;
         top: 0;
     }
+}
 
 .Button {
     padding: 17px 0;
@@ -40,15 +38,13 @@
     border: none;
     letter-spacing: 1px;
     line-height: 1;
-}
-
-.Button--:hover {
+    &--:hover {
         background-color: #13b0e9;
     }
-
-.Button--:active {
+    &--:active {
         background-color: #64d6ff;
     }
+}
 
 /* MIXINS START */
 
@@ -85,12 +81,11 @@ ul {
     background: url("../img/header-bg.jpg") no-repeat;
     max-height: 647px;
     padding-bottom: 196px;
-}
-
-.Header--Button {
+    &--Button {
         padding-left: 50px;
         padding-right: 50px;
     }
+}
 
 .Nav {
     justify-content: space-between;
@@ -102,22 +97,19 @@ ul {
     padding: 0;
     background: transparent;
     border: none;
-}
-
-.Burger-Menu:active {
+    &:active {
         box-shadow: none;
     }
-
-.Burger-Menu--Lines {
+    &--Lines {
         width: 22px;
         height: 16px;
     }
-
-.Burger-Menu--Lines-1,
-    .Burger-Menu--Lines-2,
-    .Burger-Menu--Lines-3 {
+    &--Lines-1,
+    &--Lines-2,
+    &--Lines-3 {
         fill: #0d3351;
     }
+}
 
 .Settings--Item {
     display: flex;
@@ -134,16 +126,14 @@ ul {
     font-family: 'Raleway', sans-serif;
     line-height: 24px;
     padding-left: 20px;
-}
-
-.Login.Menu-Opener::after, .Currency.Menu-Opener::after, .Language.Menu-Opener::after {
+    &.Menu-Opener::after {
         top: 5px;
     }
-
-.Login--Header, .Currency--Header, .Language--Header {
+    &--Header {
         text-decoration: none;
         color: inherit;
     }
+}
 
 .Language {
     padding-left: 0px;
@@ -151,17 +141,16 @@ ul {
 
 .Support {
     font-family: 'Raleway', sans-serif;
-}
-
-.Support--Number {
+    
+    &--Number {
         font-weight: 700;
         text-decoration: none;
         color: inherit;
     }
-
-.Support--Sign {
+    &--Sign {
         font-size: 10px;
     }
+}
 
 .Logo {
     margin-bottom: 15px;
@@ -170,17 +159,15 @@ ul {
 .Main-Header {
     margin-bottom: 58px;
     align-items: center;
-}
-
-.Main-Header--Small {
+    &--Small {
         font-size: 36px;
         margin-bottom: 35px;
     }
-
-.Main-Header--Big {
+    &--Big {
         font-size: 100px;
         text-transform: uppercase;
     }
+}
 
 
 

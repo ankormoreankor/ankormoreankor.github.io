@@ -6,75 +6,275 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>По чёрному морю</title>
   <link rel="stylesheet" href="css/style.css">
-  <link href="https://fonts.googleapis.com/css?family=Raleway:400,700|Roboto+Slab" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,400i,700|Roboto+Slab" rel="stylesheet">
 </head>
 <body class="Body">
 
     <!-- HEADER STARTS -->
 
-    <header class="Header Flex-Col">
+    <header class="Header">
 
-        <nav class="Nav Flex Container">
+            <nav class="Nav Container Flex">
 
-            <button type="button" class="Burger-Menu">
-                <svg class="Burger-Menu--Lines">
-                    <rect width="22" height="2" class="Burger-Menu--Line-1"></rect>
-                    <rect width="22" height="2" class="Burger-Menu--Line-2" y="7px"></rect>
-                    <rect width="22" height="2" class="Burger-Menu--Line-3" y="14px"></rect>
-                </svg>
-            </button>
-
-            <div class="Settings Flex">
-
-                <div class="Settings--Item Login Menu-Opener">
-                    <a  class="Login--Header" href="javascript:void(0)">Личный кабинет</a>
-
-                    <ul class="Login--List Hide">
-                        <li class="Login--Item"></li>
-                        <li class="Login--Item"></li>
-                        <li class="Login--Item"></li>
-                    </ul>
+                <div class="Nav--Button">
+                    <button type="button" class="Burger-Menu">
+                        <svg class="Burger-Menu--Lines">
+                            <rect width="22" height="2" class="Burger-Menu--Line-1"></rect>
+                            <rect width="22" height="2" class="Burger-Menu--Line-2" y="7px"></rect>
+                            <rect width="22" height="2" class="Burger-Menu--Line-3" y="14px"></rect>
+                        </svg>
+                    </button>
                 </div>
 
-                <div class="Settings--Item Currency Menu-Opener">
-                    <a href="javascript:void(0)" class="Currency--Header">Рубль</a>
+                <div class="Settings Flex">
 
-                    <ul class="Currency--List Hide">
-                        <li class="Currency--Item">Рубль</li>
-                        <li class="Currency--Item">Доллар</li>
-                    </ul>
+                    <div class="Settings--Item Login Menu-Opener">
+                        <a  class="Login--Header" href="javascript:void(0)">Личный кабинет</a>
+
+                        <ul class="Login--List Hide">
+                            <li class="Login--Item"></li>
+                            <li class="Login--Item"></li>
+                            <li class="Login--Item"></li>
+                        </ul>
+                    </div>
+
+                    <div class="Settings--Item Currency Menu-Opener">
+                        <a href="javascript:void(0)" class="Currency--Header">Рубль</a>
+
+                        <ul class="Currency--List Hide">
+                            <li class="Currency--Item">Рубль</li>
+                            <li class="Currency--Item">Доллар</li>
+                        </ul>
+                    </div>
+
+                    <div class="Settings--Item Language Menu-Opener">
+                        <a href="javascript:void(0)" class="Language--Header">Ru</a>
+
+                        <ul class="Language--List Hide">
+                            <li class="Language--Item">Ru</li>
+                            <li class="Language--Item">En</li>
+                        </ul>
+                        
+                    </div>
+
+                    <div class="Settings--Item">
+                        <div class="Support">
+                            <a href="tel:88005006105" class="Support--Number">8 800 500-61-05</a>
+                            <span class="Support--Sign">Круглосуточная поддержка</span>
+                        </div>                    
+                    </div>
+
                 </div>
 
-                <div class="Settings--Item Language Menu-Opener">
-                    <a href="javascript:void(0)" class="Language--Header">Ru</a>
+            </nav>
+        
+        <div class="Header--Content Flex-Col">
 
-                    <ul class="Language--List Hide">
-                        <li class="Language--Item">Ru</li>
-                        <li class="Language--Item">En</li>
-                    </ul>
-                    
-                </div>
+            <img src="img/logo.png" width="88" height="88" alt="" class="Logo">
 
-                <div class="Settings--Item Support">
-                    <a href="tel:88005006105" class="Support--Number">8 800 500-61-05</a>
-                    <span class="Support--Sign">Круглосуточная поддержка</span>
-                </div>
+            <h2 class="Header--Header Section-Header Flex-Col">
+                Морские прогулки
+                <span class="Header--Header_big">по чёрному морю</span>
+            </h2>
 
-            </div>
+            <button type="button" class="Button Header--Button">Выбрать круиз</button>
 
-        </nav>
+        </div>
 
-        <img src="img/logo.png" width="88" height="88" alt="" class="Logo">
-
-        <h1 class="Main-Header Flex-Col">
-            <span class="Main-Header--Small">Морские прогулки</span>
-            <span class="Main-Header--Big">по чёрному морю</span>
-        </h1>
-
-        <button class="Button Header--Button">Выбрать круиз</button>
+        
 
     </header>
 
     <!-- HEADER ENDS -->
+
+    <!-- MAIN STARTS -->
+
+    <main class="Main">
+        <section class="Content Container Flex-Col">
+
+            <h2 class="Content--Header Section-Header">Каталог круизов</h2>
+            
+            <span class="Content--Sorter">
+                Сортировать круизы по 
+                <span class="Sorting">
+                    <a href="javascript:void(0)" class="Sorting--Header Menu-Opener">цене</a>
+                    <ul class="Sorting--List Hide">
+                        <li class="Sorting--Item"></li>
+                        <li class="Sorting--Item"></li>
+                        <li class="Sorting--Item"></li>
+                    </ul>
+                </span>
+            </span>
+            
+            <div class="Product-Cards Flex-Wrap">
+
+                <div class="Product-Cards--Container">
+
+                    <article class="Product-Card">
+                        <img src="img/card-1.jpg" alt="" class="Product-Card--Img">
+                        <div class="Product-Card--Container">
+                            <a href="javascript:void(0)" class="Product-Card--Opener">
+                                <h3 class="Product-Card--Header">
+                                    Морской круиз в Анапу
+                                </h3>
+                            </a>
+                            <ul class="Product-Card--Description_short">
+                                <li><span class="Bold">Маршрут: </span>Сочи-Лазаревское-Геленджик-Анапа</li>
+                                <li><span class="Bold">Продолжительность: </span>10 ч. 0 мин.</li>
+                            </ul>
+                            <span class="Product-Card--Cost">49 000 руб.</span>
+                        </div>
+                        
+
+                        <div class="Label_blue">
+                            <div class="Label_blue--Inner Flex-Col">
+                                <span class="Label_blue--Content">Хит продаж</span>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            
+                <div class="Product-Cards--Container">
+            
+                    <article class="Product-Card">
+                        <img src="img/card-2.jpg" alt="" class="Product-Card--Img">
+                        <div class="Product-Card--Container">
+                            <a href="javascript:void(0)" class="Product-Card--Opener">
+                                <h3 class="Product-Card--Header">
+                                    Обзорная морская прогулка с экскурсией
+                                </h3>
+                            </a>
+                            <ul class="Product-Card--Description_short">
+                                <li><span class="Bold">Маршрут: </span>Сочи-Адлер-Сочи (без высадки)</li>
+                                <li><span class="Bold">Продолжительность: </span>1 ч. 0 мин.</li>
+                            </ul>
+                            <span class="Product-Card--Cost">
+                                5 000 руб.
+                                <span class="Product-Card--Cost_old">15000 руб.</span>
+                            </span>
+                        </div>
+
+                        
+                        <div class="Label_red">
+                            <div class="Label_red--Inner Flex-Col">
+                                <span class="Label_red--Content">Акция</span>
+                            </div>
+                        </div>
+                    </article>
+            
+                    <article class="Product-Card">
+                        <img src="img/card-3.jpg" alt="" class="Product-Card--Img">
+                        <div class="Product-Card--Container">
+                            <a href="javascript:void(0)" class="Product-Card--Opener">
+                                <h3 class="Product-Card--Header">
+                                    Морская прогулка в Геленджик
+                                </h3>
+                            </a>
+                            <ul class="Product-Card--Description_short">
+                                <li><span class="Bold">Маршрут: </span>Сочи-Туапсе-Геленджик</li>
+                                <li><span class="Bold">Продолжительность: </span>12 ч. 30 мин.</li>
+                            </ul>
+                            <span class="Product-Card--Cost">
+                                7 000 руб.
+                                <span class="Product-Card--Cost_old">10000 руб.</span>
+                            </span>
+                        </div>
+                        
+                        <div class="Label_red">
+                            <div class="Label_red--Inner Flex-Col">
+                                <span class="Label_red--Content">скидка 10%</span>
+                            </div>
+                        </div>
+                    </article>
+            
+                </div>
+
+                <div class="Product-Cards--Container">
+
+                    <article class="Product-Card">
+                        <img src="img/card-4.jpg" alt="" class="Product-Card--Img">
+                        <div class="Product-Card--Container">
+                            <a href="javascript:void(0)" class="Product-Card--Opener">
+                                <h3 class="Product-Card--Header">
+                                    Морской круиз в Новороссийск
+                                </h3>
+                            </a>
+                            <ul class="Product-Card--Description_short">
+                                <li><span class="Bold">Маршрут: </span>Сочи-Геленджик-Новороссйиск-Геленджик-Сочи</li>
+                                <li><span class="Bold">Продолжительность: </span>13 ч. 0 мин.</li>
+                            </ul>
+                            <span class="Product-Card--Cost">14 800 руб.</span>
+                        </div>
+                    </article>
+
+                </div>
+                
+                <div class="Product-Cards--Container">
+
+                    <article class="Product-Card">
+                    <img src="img/card-5.jpg" alt="" class="Product-Card--Img">
+                    <div class="Product-Card--Container">
+                        <a href="javascript:void(0)" class="Product-Card--Opener">
+                            <h3 class="Product-Card--Header">
+                                Морская прогулка в Абрау-Дюрсо  
+                            </h3>
+                        </a>
+                        <ul class="Product-Card--Description_short">
+                            <li><span class="Bold">Маршрут: </span>Сочи-Абрау-Дюрсо</li>
+                            <li><span class="Bold">Продолжительность: </span>11 ч. 0 мин.</li>
+                        </ul>
+                        <span class="Product-Card--Cost">14 800 руб.</span>
+                    </div>
+                </article>
+
+                </div>
+            
+            </div>
+
+            <button type="button" class="Button Content--Button Menu-Opener">Больше круизов</button>
+
+        </section>
+    </main>
+
+    <!-- MAIN ENDS -->
+
+    <!-- FOOTER STARTS -->
+
+    <footer class="Footer">
+        <div class="Footer--Container Container Flex-Wrap">
+            
+            <nav class="Footer--Nav Flex-Col">
+                <a href="javascript:void(0)" class="Footer--Nav-Item">Вход для партнеров</a>
+                <a href="javascript:void(0)" class="Footer--Nav-Item">О компании</a>
+                <a href="javascript:void(0)" class="Footer--Nav-Item">Контакты</a>
+            </nav>
+            
+            <div class="Footer--Social">
+                <span class="Footer--Social-Appeal">Будь на связи:</span>
+                <div class="Social Flex-Wrap">
+                    <a href="javascript:void(0)" class="Social--Button Social--Button_vk"></a>
+                    <a href="javascript:void(0)" class="Social--Button Social--Button_ok"></a>
+                    <a href="javascript:void(0)" class="Social--Button Social--Button_yt"></a>
+                    <a href="javascript:void(0)" class="Social--Button Social--Button_in"></a>
+                </div>
+            </div>
+            
+            <div class="Footer--Contacts">
+                <div class="Support">
+                    <a href="tel:88005006105" class="Support--Number">8 800 500-61-05</a>
+                    <span class="Support--Sign">Круглосуточная поддержка</span>
+                </div>                
+                <span class="Copyright">&#169; 2016 OOO &laquo;Городские Круизы&raquo;</span>
+            </div>
+
+        </div>
+    </footer>
+
+    
+
+    <!-- FOOTER ENDS -->
+
+    
 </body>
 </html>

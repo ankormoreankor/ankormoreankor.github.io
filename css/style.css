@@ -5,12 +5,30 @@
     font-size: 14px;
     line-height: 1;
     color: #0d3351;
-    letter-spacing: 1px;
+    letter-spacing: 0.05em;
 }
 
-.Container {
-    width: 1140px;
-    margin: auto;
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+h1, h2, h3 {
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* INDEPENDENT BLOCKS STARTS */
+
+.Section-Header {
+    font-size: 36px;
 }
 
 .Menu-Opener {
@@ -22,8 +40,8 @@
         content: "";
         position: absolute;
         display: block;
-        width: 7px;
-        height: 7px;
+        width: 6px;
+        height: 6px;
         background-image: linear-gradient(45deg, #0d3351 50%, transparent 50%);
         -webkit-transform: rotate(-45deg);
                 transform: rotate(-45deg);
@@ -31,8 +49,27 @@
         top: 0;
     }
 
+.Support {
+    font-family: 'Raleway', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.Support--Number {
+        font-weight: 700;
+        text-decoration: none;
+        color: inherit;
+        margin-bottom: 4px;
+    }
+
+.Support--Sign {
+        font-size: 10px;
+    }
+
 .Button {
-    padding: 17px 0;
+    padding-top: 17px;
+    padding-bottom: 17px;
     font-family: 'Raleway', sans-serif;
     color: #ffffff;
     background-color: #33c7fd;
@@ -40,17 +77,95 @@
     border: none;
     letter-spacing: 1px;
     line-height: 1;
+    word-break: break-all;
 }
 
-.Button--:hover {
+.Button:hover {
         background-color: #13b0e9;
     }
 
-.Button--:active {
+.Button:active {
         background-color: #64d6ff;
     }
 
+.Label_blue,
+.Label_red {
+    position: absolute;
+    display: block;
+    right: 46px;
+    top: -7px;
+}
+
+.Label_blue--Inner, .Label_red--Inner {
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        width: 89px;
+        min-height: 82px;
+    }
+
+.Label_blue--Inner::before,
+        .Label_blue--Inner::after,
+        .Label_red--Inner::before,
+        .Label_red--Inner::after {
+            content: "";
+            position: absolute;
+            display: block;
+            bottom: -19px;
+            width: 45px;
+            height: 19px;
+        }
+
+.Label_blue--Inner::before, .Label_red--Inner::before {
+            left: 0;
+        }
+
+.Label_blue--Inner::after, .Label_red--Inner::after {
+            right: 0;
+        }
+
+.Label_blue--Content, .Label_red--Content {
+        font-family: 'Raleway', sans-serif;
+        word-break: break-word;
+        color: #ffffff;
+        line-height: 18px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+.Label_blue--Inner {
+        background-color: #33c7fd;
+    }
+
+.Label_blue--Inner::before {
+            background-image: linear-gradient(160deg, #33c7fd 48%, transparent 52%);
+        }
+
+.Label_blue--Inner::after {
+            background-image: linear-gradient(200deg, #33c7fd 48%, transparent 52%);
+        }
+
+.Label_red--Inner {
+        background-color: #f20542;
+    }
+
+.Label_red--Inner::before {
+            background-image: linear-gradient(160deg, #f20542 48%, transparent 52%);
+        }
+
+.Label_red--Inner::after {
+            background-image: linear-gradient(200deg, #f20542 48%, transparent 52%);
+        }
+
+/* INDEPENDENT BLOCKS ENDS */
+
 /* MIXINS START */
+
+.Container {
+    max-width: 1200px;
+    padding: 0 30px;
+    margin: auto;
+}
 
 .Flex {
     display: flex;
@@ -70,26 +185,48 @@
     display: none;
 }
 
-/* MIXINS ENDS */
-
-ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+.Bold {
+    font-weight: 700;
 }
+
+/* MIXINS ENDS */
 
 /* HEADER STARTS */
 
 .Header {
-    align-items: center;
-    background: url("../img/header-bg.jpg") no-repeat;
+    background: #f3f3f3 url("../img/header-bg.jpg") top center no-repeat;
     max-height: 647px;
-    padding-bottom: 196px;
+    padding-bottom: 190px;
 }
+
+.Header--Content {
+        align-items: center;
+    }
+
+.Header--Header {
+        margin-bottom: 50px;
+        align-items: center;
+    }
+
+.Header--Header_big {
+            font-size: 100px;
+            text-transform: uppercase;
+            letter-spacing: -0.025em;
+            padding-top: 43px;
+        }
 
 .Header--Button {
         padding-left: 50px;
         padding-right: 50px;
+        position: relative;
+    }
+
+.Header--Button::after {
+        content: url("../img/dashed-curve.png");
+        position: absolute;
+        width: 100%;
+        top: 64px;
+        left: 0;
     }
 
 .Nav {
@@ -97,6 +234,10 @@ ul {
     padding-top: 34px;
     padding-bottom: 25px;
 }
+
+.Nav--Button {
+    flex-grow: 1;
+    }
 
 .Burger-Menu {
     padding: 0;
@@ -137,132 +278,228 @@ ul {
 }
 
 .Login.Menu-Opener::after, .Currency.Menu-Opener::after, .Language.Menu-Opener::after {
-        top: 5px;
-    }
-
-.Login--Header, .Currency--Header, .Language--Header {
-        text-decoration: none;
-        color: inherit;
+        top: 7px;
     }
 
 .Language {
     padding-left: 0px;
 }
 
-.Support {
-    font-family: 'Raleway', sans-serif;
+.Login::before, .Currency::before {
+        position: absolute;
+        left: 0;
+    }
+
+.Login::before {
+    content: url("../img/user.svg");
 }
 
-.Support--Number {
-        font-weight: 700;
-        text-decoration: none;
-        color: inherit;
-    }
-
-.Support--Sign {
-        font-size: 10px;
-    }
+.Currency::before {
+    content: url("../img/ruble.svg");
+    top: 2px;
+}
 
 .Logo {
     margin-bottom: 15px;
 }
 
-.Main-Header {
-    margin-bottom: 58px;
+/* HEADER ENDS */
+
+/* MAIN STARTS */
+
+.Main {
+    background-color: #f3f3f3;
+}
+
+.Content {
+    padding-top: 120px;
+    padding-bottom: 60px;
     align-items: center;
 }
 
-.Main-Header--Small {
-        font-size: 36px;
-        margin-bottom: 35px;
+.Content--Header {
+        margin-bottom: 15px;
     }
 
-.Main-Header--Big {
-        font-size: 100px;
-        text-transform: uppercase;
+.Content--Sorter {
+        font-family: 'Raleway', sans-serif;
     }
 
+.Content--Button {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
 
+.Content--Button.Menu-Opener::after {
+                background-image: linear-gradient(45deg, #ffffff 50%, transparent 50%);
+                top: 20px;
+                right: 25px;
+            }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* .insta, .insta-1, .ok, .ok-1, .vk, .vk-1, .yt, .yt-1{
-	background: url(sprites.png) no-repeat;
+.Sorting {
+    display: inline-block;
+    font-style: italic;
+    line-height: 24px;
+    margin-bottom: 45px;
 }
 
-.insta{
-	background-position: -92.98611450195312px 0;
-	width: 30px;
-	height: 30px;
+.Sorting--Header {
+    display: inline-block;
+    }
+
+.Sorting--Header.Menu-Opener::after {
+            top: 8px;
+        }
+
+.Product-Cards {
+    justify-content: space-between;
+    margin-bottom: 5px;
 }
 
-.insta-1{
-	background-position: -92.97219848632812px -30.986114501953125px ;
-	width: 30px;
-	height: 30px;
+.Product-Cards--Container {
+        margin-bottom: 20px;
+    }
+
+.Product-Cards .Product-Card:nth-child(2) {
+        margin-top: 20px;
+    }
+
+.Product-Card {
+    position: relative;
+    background-color: #ffffff;
+    max-width: 555px;
 }
 
-.ok{
-	background-position: -61.986114501953125px -30.989608764648438px ;
-	width: 30px;
-	height: 30px;
+.Product-Card--Img {
+        display: block;
+    }
+
+.Product-Card--Container {
+        padding: 27px 38px 37px 38px;
+    }
+
+.Product-Card--Opener {
+        position: relative;
+        padding-right: 15px;
+        display: inline-block;
+        margin-bottom: 20px;
+    }
+
+.Product-Card--Opener::after {
+            content: "";
+            position: absolute;
+            display: block;
+            width: 6px;
+            height: 6px;
+            background-image: linear-gradient(45deg, #00a2dd 50%, transparent 50%);
+            -webkit-transform: rotate(-135deg);
+                    transform: rotate(-135deg);
+            right: 0;
+            top: 8px;
+        }
+
+.Product-Card--Header {
+        color: #00a2dd;
+        font-size: 18px;
+    }
+
+.Product-Card--Description_short {
+        margin-bottom: 22px;
+    }
+
+.Product-Card--Description_short li:first-child {
+            margin-bottom: 9px;
+        }
+
+.Product-Card--Cost {
+        font-size: 30px;
+    }
+
+.Product-Card--Cost_old {
+            font-size: 18px;
+            opacity: 0.55;
+            text-decoration: line-through;
+        }
+
+/* MAIN ENDS */
+
+/* FOOTER STARTS */
+
+.Footer {
+    background-color: #ffffff;
 }
 
-.ok-1{
-	background-position: -61.96875px 0;
-	width: 30px;
-	height: 30px;
+.Footer--Container {
+        padding-top: 30px;
+        padding-bottom: 40px;
+        font-family: 'Raleway', sans-serif;
+    }
+
+.Footer--Nav {
+        align-items: flex-start;
+        justify-content: space-between;
+        margin-right: 150px;
+    }
+
+.Footer--Social {
+        flex-grow: 1;
+    }
+
+.Footer--Social-Appeal {
+            display: inline-block;
+            margin-bottom: 12px;
+        }
+
+.Footer--Contacts .Support {
+            margin-bottom: 15px;
+        }
+
+.Social {
+    width: 150px;
+    justify-content: space-between;
 }
 
-.vk{
-	background-position: -30.986114501953125px -30.989608764648438px ;
-	width: 30px;
-	height: 30px;
-}
+.Social--Button {
+        display: block;
+        width: 30px;
+        height: 30px;
+        background: url("../img/sprites-social.png") no-repeat;
+    }
 
-.vk-1{
-	background-position: -30.986114501953125px 0;
-	width: 30px;
-	height: 30px;
-}
+.Social--Button:hover {
+            background: url("../img/sprites-social.png") no-repeat;
+        }
 
-.yt{
-	background-position: 0 -30.989608764648438px ;
-	width: 30px;
-	height: 30px;
-}
+.Social--Button_vk {
+        background-position: -30px 0;
+    }
 
-.yt-1{
-	background-position: 0 0;
-	width: 30px;
-	height: 30px;
-}
-  */
+.Social--Button_vk:hover {
+            background-position: -30px -30px;
+        }
+
+.Social--Button_ok {
+        background-position: -61px 0;
+    }
+
+.Social--Button_ok:hover {
+            background-position: -61px -30px;
+        }
+
+.Social--Button_yt {
+        background-position: 0 0;
+    }
+
+.Social--Button_yt:hover {
+            background-position: 0 -30px;
+        }
+
+.Social--Button_in {
+        background-position: -92px 0;
+    }
+
+.Social--Button_in:hover {
+            background-position: -92px -30px;
+        }
+
+/* FOOTER ENDS */

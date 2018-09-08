@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>По чёрному морю</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <link href="https://fonts.googleapis.com/css?family=Raleway:400,400i,700|Roboto+Slab" rel="stylesheet">
 </head>
 <body class="Body">
@@ -16,14 +16,37 @@
 
             <nav class="Nav Container Flex">
 
-                <div class="Nav--Button">
-                    <button type="button" class="Burger-Menu">
-                        <svg class="Burger-Menu--Lines">
-                            <rect width="22" height="2" class="Burger-Menu--Line-1"></rect>
-                            <rect width="22" height="2" class="Burger-Menu--Line-2" y="7px"></rect>
-                            <rect width="22" height="2" class="Burger-Menu--Line-3" y="14px"></rect>
-                        </svg>
-                    </button>
+                <div class="Burger-menu">
+                    <div class="Burger-menu--Button">
+                        <button type="button" class="Burger-button">
+                            <svg class="Burger-button--Lines">
+                                <rect width="22" height="2" class="Burger-button--Line-1"></rect>
+                                <rect width="22" height="2" class="Burger-button--Line-2" y="7px"></rect>
+                                <rect width="22" height="2" class="Burger-button--Line-3" y="14px"></rect>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <ul class="Burger-menu--List Hide Flex-Col">
+                        <li class="Burger-menu--Item">
+                            <a href="javascript:void(0)">Популярные маршруты</a>
+                        </li>
+                        <li class="Burger-menu--Item">
+                            <a href="javascript:void(0)">Расписание рейсов</a>
+                        </li>
+                        <li class="Burger-menu--Item">
+                            <a href="javascript:void(0)">Забронированные рейсы</a>
+                        </li>
+                        <li class="Burger-menu--Item">
+                            <a href="javascript:void(0)">Вход для партнёров</a>
+                        </li>
+                        <li class="Burger-menu--Item">
+                            <a href="javascript:void(0)">О компании</a>
+                        </li>
+                        <li class="Burger-menu--Item">
+                            <a href="javascript:void(0)">Контакты</a>
+                        </li>
+                    </ul>
                 </div>
 
                 <div class="Settings Flex">

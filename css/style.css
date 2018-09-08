@@ -237,30 +237,52 @@ a {
     justify-content: space-between;
     padding-top: 34px;
     padding-bottom: 25px;
+    
 }
 
-.Nav--Button {
-    flex-grow: 1;
+.Burger-menu {
+    position: relative;
+}
+
+.Burger-menu--Button {
+        flex-grow: 1;
     }
 
-.Burger-Menu {
+.Burger-menu--List {
+        position: absolute;
+        left: 0;
+        top: 28px;
+        z-index: 1;
+        width: 330px;
+        background-color: #0d3351;
+        padding: 70px 45px 80px 45px;
+    }
+
+.Burger-menu--Item {
+        color: #ffffff;
+        font-size: 18px;
+        line-height: 54px;
+    }
+
+.Burger-button {
     padding: 0;
     background: transparent;
     border: none;
+    cursor: pointer;
 }
 
-.Burger-Menu:active {
+.Burger-button:active {
         box-shadow: none;
     }
 
-.Burger-Menu--Lines {
+.Burger-button--Lines {
         width: 22px;
         height: 16px;
     }
 
-.Burger-Menu--Lines-1,
-    .Burger-Menu--Lines-2,
-    .Burger-Menu--Lines-3 {
+.Burger-button--Lines-1,
+    .Burger-button--Lines-2,
+    .Burger-button--Lines-3 {
         fill: #0d3351;
     }
 
@@ -633,6 +655,11 @@ a {
             .Header--Header_big {
                 font-size: 50px;
             }
+
+    .Burger-menu--List {
+        padding: 40px 15px;
+        width: 260px;
+    }
 
     .Content {
         padding-top: 55px;
